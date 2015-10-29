@@ -15,7 +15,7 @@ def blanc_with_zeros(dir_path, file_in, col_start=None, col_end=None, write_file
     df = pd.read_csv(dir_path + file_in, sep=None, engine='python')
     df = df.loc[:, col_start:col_end].fillna(0)
     if write_file:
-        df.to_csv(dir_path+f_test_out, index=False)
+        df.to_csv(dir_path+file_out, index=False)
         return
     else:
         return df
